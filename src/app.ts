@@ -7,6 +7,12 @@ class App {
 
   constructor() {
     this.app = express()
+    this.connectionToDatabase()
+  }
+
+
+  private connectionToDatabase() {
+
   }
 
 }
