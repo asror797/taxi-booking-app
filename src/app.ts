@@ -1,8 +1,10 @@
-import express from "express"
-
+import express from 'express'
+import * as http from 'http'
+import { PORT } from './config'
 
 class App {
-  public app: Express.Application
+  public app: express.Application
+  public socket:any
 
 
   constructor() {
@@ -10,9 +12,19 @@ class App {
     this.connectionToDatabase()
   }
 
+  public listen() {
+    this.app.listen(PORT,() => {
+      console.log(`Server is runing at ${PORT}`)
+    })
+  }
+
 
   private connectionToDatabase() {
 
+  }
+
+  private initializeRoutes() {
+    
   }
 
 }
