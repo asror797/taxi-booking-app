@@ -1,5 +1,5 @@
 import { Document } from "mongoose";
-import { IRole } from "./routes.interface";
+import { IRole } from "./role.interface";
 
 
 

@@ -1,16 +1,22 @@
 import { model , Schema, Document } from "mongoose";
-import { IUser } from "../interfaces/users.interface";
+import { IRole } from "../interfaces/role.interface";
 
-
-const userSchema: Schema = new Schema(
+const roleSchema: Schema = new Schema(
    {
-      firstName: {
+      name: {
          type: String,
-         required: true
+         required: true,
+         enum: ['admin', 'client', 'driver']
       },
-      lastName: {
-         type: String,
+      permissionURI: {
+         type: [String],
          required: true
       }
    }
 )
+
+
+const roleModel = model<IRole & Document>('Role',roleSchema)
+
+export default roleModel;
+
