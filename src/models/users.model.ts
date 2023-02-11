@@ -26,6 +26,9 @@ const userSchema: Schema = new Schema(
          required:true
       }
 
+   },
+   {
+      timestamps: true
    }
 )
 
