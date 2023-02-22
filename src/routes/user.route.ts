@@ -16,6 +16,7 @@ class UserRoute {
 
    private initializeRoutes() {
       this.router.get(`${this.path}`,this.userController.GET)
+      this.router.post(`${this.path}`,this.userController.CREATE)
    }
 }
 

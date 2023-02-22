@@ -12,6 +12,40 @@ POST {{baseURL}}/role
 Content-Type: application/json
 
 {
-   "name":"DRIVER",
+   "name":"CLIENT",
    "permissionURI":["http://localhost:9000"]
+}
+
+
+
+### GET USER
+GET {{baseURL}}/user
+Content-Type: application/json
+
+
+### CREATE USER
+POST {{baseURL}}/user
+Content-Type: application/json
+
+{
+   "firstname":"Asrorbek",
+   "lastname":"Shahobiddinov",
+   "phonenumber":"+998136502221",
+   "password":"12345678",
+   "role":"63f57ff92e31bd95dd31c628"
+}
+
+
+
+### GET REGION
+GET {{baseURL}}/region
+Content-Type: application/json
+
+
+### CREATE REGION
+POST {{baseURL}}/region
+Content-Type: application/json
+
+{
+   "name":"Namangan"
 }

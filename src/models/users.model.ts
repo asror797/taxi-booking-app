@@ -4,11 +4,11 @@ import { IUser } from "../interfaces/users.interface"
 
 const userSchema: Schema = new Schema(
    {
-      firstName: {
+      firstname: {
          type: String,
          required: true
       },
-      lastName: {
+      lastname: {
          type: String,
          required: true
       },
@@ -16,11 +16,15 @@ const userSchema: Schema = new Schema(
          type: String,
          required: true
       },
-      phoneNumberVerified: {
+      phonenumber: {
+         type: String,
+         required:true
+      },
+      phonenumberverified: {
          type:Boolean,
          default:false
       },
-      isActive: {
+      is_active: {
          type: Boolean,
          default:true
       },
