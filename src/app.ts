@@ -12,6 +12,7 @@ class App {
 
   constructor(routes:Routes[]) {
     this.app = express()
+    this.initializeMiddlewares()
     this.connectionToDatabase()
     this.initializeRoutes(routes)
   }
@@ -31,6 +32,10 @@ class App {
     } catch (error) {
       console.error(error)
     } 
+  }
+
+  private initializeMiddlewares() {
+    this.app.use(express.json())
   }
 
   public initializeRoutes(routes:Routes[]) {

@@ -1,4 +1,4 @@
-import { model , Schema, Document } from "mongoose";
+import { model , Schema, Document, Model } from "mongoose";
 import { IRole } from "../interfaces/role.interface";
 
 const roleSchema: Schema = new Schema(
@@ -6,7 +6,7 @@ const roleSchema: Schema = new Schema(
       name: {
          type: String,
          required: true,
-         enum: ['admin', 'client', 'driver']
+         enum: ['ADMIN', 'CLIENT', 'DRIVER']
       },
       permissionURI: {
          type: [String],
@@ -20,6 +20,8 @@ const roleSchema: Schema = new Schema(
 
 
 const roleModel = model<IRole & Document>('Role',roleSchema)
+
+// const  roleModel:Model<IRole> = model<IRole>('Role',roleSchema)
 
 export default roleModel;
 

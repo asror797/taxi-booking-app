@@ -1,3 +1,4 @@
+import { CreateRoleDto } from "../dtos/role.dto";
 import { IRole } from "../interfaces/role.interface";
 import roleModel from "../models/role.model";
 
@@ -12,9 +13,11 @@ class RoleService {
       return await this.repo.find().exec()
    }
 
-   public async createRole():Promise<number> {
+   public async createRole(params:CreateRoleDto):Promise<IRole> {
 
-      return 5 ;
+      // const newRole:IRole = new this.repo()
+
+      return await this.repo.create({...params});
    }
 }
 

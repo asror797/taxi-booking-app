@@ -1,0 +1,17 @@
+@baseURL = http://localhost:9000
+
+
+
+### GET ROLE
+GET {{baseURL}}/role
+Content-Type: application/json
+
+
+### CREATE ROLE
+POST {{baseURL}}/role
+Content-Type: application/json
+
+{
+   "name":"DRIVER",
+   "permissionURI":["http://localhost:9000"]
+}

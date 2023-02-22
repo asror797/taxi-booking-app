@@ -15,6 +15,7 @@ class RoleRoute {
 
    public initializeRoute() {
       this.router.get(`${this.path}`,this.roleController.GET)
+      this.router.post(`${this.path}`,this.roleController.CREATE)
    }
    
 }
