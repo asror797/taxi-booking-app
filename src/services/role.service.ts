@@ -4,12 +4,18 @@ import roleModel from "../models/role.model";
 
 
 class RoleService {
-   public repo = roleModel;
+   
+   private repo = roleModel;
 
    public async getAllRole():Promise<IRole[]> {
 
-      return await this.repo.find()
+      return await this.repo.find().exec()
+   }
+
+   public async createRole():Promise<number> {
+
+      return 5 ;
    }
 }
 
-export default RoleService;
+export default  new RoleService();

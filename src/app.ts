@@ -1,7 +1,7 @@
 import express from 'express'
-import * as http from 'http'
+// import * as http from 'http'
 import { connect, set } from 'mongoose'
-import { DB_HOST, PORT } from './config'
+import { PORT } from './config'
 import { dbConnection } from './databases'
 import { Routes } from './interfaces/routes.interface'
 

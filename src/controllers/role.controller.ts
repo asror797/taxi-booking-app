@@ -6,7 +6,7 @@ import RoleService from "../services/role.service";
 
 class RoleController {
 
-   public roleService = new RoleService()
+   public roleService = RoleService;
 
    public GET =  async(req:Request,res:Response,next:NextFunction) => {
       try {
