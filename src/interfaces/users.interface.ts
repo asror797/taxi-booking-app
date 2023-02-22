@@ -8,6 +8,7 @@ export interface IUser extends Document {
    lastName:string
    password:string
    phoneNumberVerified:boolean
+   isActive:boolean
    role:IRole['_id']
 }
 
